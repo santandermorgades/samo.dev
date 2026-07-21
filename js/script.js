@@ -47,13 +47,15 @@ const levelObserver = new IntersectionObserver((entries) => {
 document.querySelectorAll('.skills-grid').forEach(el => levelObserver.observe(el));
 
 // =========================================
-// HAMBURGER MENU (mobile)
+// HAMBURGER MENU (mobile) - MEJORADO
 // =========================================
 const hamburgerBtn = document.getElementById('hamburgerBtn');
 const menuNav = document.getElementById('menuNav');
 const mobileOverlay = document.getElementById('mobileOverlay');
 
 function closeMobileMenu() {
+    if (!hamburgerBtn || !menuNav || !mobileOverlay) return;
+    
     hamburgerBtn.classList.remove('active');
     menuNav.classList.remove('open');
     mobileOverlay.classList.remove('active');
@@ -61,12 +63,15 @@ function closeMobileMenu() {
 }
 
 function toggleMobileMenu() {
+    if (!hamburgerBtn || !menuNav || !mobileOverlay) return;
+    
     const isOpen = menuNav.classList.toggle('open');
     hamburgerBtn.classList.toggle('active', isOpen);
     mobileOverlay.classList.toggle('active', isOpen);
     hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
 }
 
+// Eventos principales
 if (hamburgerBtn) {
     hamburgerBtn.addEventListener('click', toggleMobileMenu);
 }
@@ -75,12 +80,19 @@ if (mobileOverlay) {
     mobileOverlay.addEventListener('click', closeMobileMenu);
 }
 
-// Close mobile menu when a nav link is clicked
+// Cerrar al hacer clic en enlaces
 document.querySelectorAll('.menu-nav a').forEach(link => {
     link.addEventListener('click', closeMobileMenu);
 });
 
-// Close mobile menu on resize back to desktop
+// Cerrar con tecla Escape (mejora importante)
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeMobileMenu();
+    }
+});
+
+// Cerrar al redimensionar a desktop
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
         closeMobileMenu();
