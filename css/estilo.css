@@ -127,6 +127,11 @@
             letter-spacing: -0.5px;
         }
 
+        .menu-nav {
+            overflow-y: auto;
+            max-height: 100vh;
+        }
+
         .menu-nav ul {
             display: flex;
             list-style: none;
@@ -1515,6 +1520,76 @@
         /* =========================================
            RESPONSIVE
         ========================================= */
+        /* ===================== MEJORAS MOBILE ===================== */
+
+        @media (max-width: 480px) {
+            .nav {
+                padding: 0 1rem;
+                height: 60px;
+            }
+            
+            .presentacion {
+                padding: 3rem 1rem;
+                min-height: calc(100vh - 100px);
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .sobre {
+                padding: 3rem 1rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 1.2rem;
+            }
+            
+            .proyectos-grid {
+                gap: 1.4rem;
+            }
+            
+            .contacto-items {
+                gap: 0.8rem;
+            }
+        }
+
+        /* Muy pequeños (Galaxy Fold, iPhone SE, etc.) */
+        @media (max-width: 360px) {
+            .logo-text {
+                font-size: 18px;
+            }
+            
+            .section-header h2 {
+                font-size: 1.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-dot {
+                left: 20px;
+            }
+            
+            .timeline-content {
+                margin-left: 50px !important;
+                width: calc(100% - 50px) !important;
+                text-align: left !important;
+            }
+        }
+
+
         @media (max-width: 768px) {
             .hamburger { display: flex; }
 
