@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMO | Desarrollador Full-Stack</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/fontawesome.min.css">
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+
+    <!-- ===== BANNER ===== -->
+    <section class="header">
+        <p data-i18n="banner_whatsapp">Contactar por WhatsApp</p>
+        <i class="fa-brands fa-whatsapp"></i>
+    </section>
+
+    <!-- ===== NAVBAR ===== -->
+    <header class="nav">
+        <div class="logo">
+            <img src="./img/logo.png" alt="Logo SAMO">
+            <span class="logo-text">SAMO</span>
+        </div>
+
+        <nav class="menu-nav" id="menuNav">
+            <ul>
+                <li><a href="#" data-i18n="nav_inicio">Inicio</a></li>
+                <li><a href="#sobre_mi" data-i18n="nav_sobre">Sobre mí</a></li>
+                <li><a href="#habilidades" data-i18n="nav_habilidades">Habilidades</a></li>
+                <li><a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a></li>
+                <li><a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a></li>
+                <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="nav-actions">
+            <div class="lang-switcher" id="langSwitcher">
+                <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false" aria-label="Cambiar idioma">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="currentLang">ES</span>
+                    <i class="fa-solid fa-chevron-down lang-caret"></i>
+                </button>
+                <ul class="lang-dropdown" id="langDropdown">
+                    <li data-lang="es" class="lang-option active">
+                        <span class="lang-flag">🇪🇸</span> Español
+                    </li>
+                    <li data-lang="en" class="lang-option">
+                        <span class="lang-flag">🇬🇧</span> English
+                    </li>
+                    <li data-lang="fr" class="lang-option">
+                        <span class="lang-flag">🇫🇷</span> Français
+                    </li>
+                </ul>
+            </div>
+
+            <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile menu overlay backdrop -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- ===== HERO ===== -->
+    <section class="presentacion">
+        <div class="hero-floaters">
+            <i class="fa-brands fa-html5 floater"></i>
+            <i class="fa-brands fa-js floater"></i>
+            <i class="fa-brands fa-react floater"></i>
+            <i class="fa-brands fa-php floater"></i>
+            <i class="fa-solid fa-database floater"></i>
+            <i class="fa-brands fa-css3-alt floater"></i>
+        </div>
+
+        <div class="hero-badge">
+            <span class="dot"></span>
+            <span data-i18n="hero_badge">Disponible para proyectos</span>
+        </div>
+
+        <h1><span data-i18n="hero_greeting">Hola!, Soy</span> <span>SAMO</span></h1>
+        <h3 data-i18n="hero_role">Desarrollador Full-Stack</h3>
+        <p data-i18n="hero_text">Con dominio de herramientas digitales
+        y una sólida formación en programación, mantenimiento y gestión de proyectos digitales.</p>
+
+        <div class="hero-btns">
+            <a href="#proyectos" class="btn-primary" data-i18n="btn_ver_proyectos">Ver Proyectos</a>
+            <a href="#contacto" class="btn-secondary" data-i18n="btn_contactarme">Contactarme</a>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-num">+2</span>
+                <span class="stat-label" data-i18n="stat_proyectos">Proyectos</span>
+            </div>
+            <div class="stats-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">2+</span>
+                <span class="stat-label" data-i18n="stat_anios">Años exp.</span>
+            </div>
+            <div class="stats-divider"></div>
+            <div class="stat-item">
+                <span class="stat-num">5+</span>
+                <span class="stat-label" data-i18n="stat_tecnologias">Tecnologías</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOBRE MÍ ===== -->
+    <section class="sobre" id="sobre_mi">
+        <div class="sobre_img reveal-left">
+            <img src="./img/fondo.PNG" alt="Foto de perfil">
+        </div>
+        <div class="sobre_texto reveal-right">
+            <span class="section-tag" data-i18n="tag_sobre">Sobre mí</span>
+            <h2 data-i18n="sobre_titulo">Desarrollador apasionado por el código</h2>
+            <p data-i18n="sobre_p1">
+                Graduado como Técnico Superior en Desarrollo de Aplicaciones Web en el Instituto Superior de
+                Telecomunicaciones y Tecnologías de Información y Comunicación de OYALA (INSTTIC), tras completar
+                el Bachillerato en el Colegio Adventista de Bata. Cuento con dominio de herramientas digitales y
+                una sólida formación en programación, mantenimiento y gestión de proyectos digitales.
+            </p>
+            <p data-i18n="sobre_p2">
+                Soy una persona organizada, con gran capacidad de aprendizaje y facilidad de adaptación a nuevos
+                retos. Mi objetivo es crecer profesionalmente en el ámbito informático, aportando compromiso,
+                ética laboral y pensamiento analítico al desarrollo tecnológico de mi entorno.
+            </p>
+            <ul class="sobre-list">
+                <li class="sobre-list-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="sobre_li1">Desarrollo Front-End & Back-End</span></li>
+                <li class="sobre-list-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="sobre_li2">Diseño y gestión de bases de datos</span></li>
+                <li class="sobre-list-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="sobre_li3">Diseño UX/UI</span></li>
+                <li class="sobre-list-item"><i class="fa-solid fa-check-circle"></i> <span data-i18n="sobre_li4">Ofimática avanzada (Word, Excel, PowerPoint)</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ===== HABILIDADES ===== -->
+    <section class="Habilitis" id="habilidades">
+        <div class="section-header reveal">
+            <span class="section-tag" style="color: var(--color3);" data-i18n="tag_stack">Stack Tecnológico</span>
+            <h2 data-i18n="habilidades_titulo">Mis Habilidades</h2>
+            <p data-i18n="habilidades_desc">Tecnologías y herramientas con las que trabajo para crear soluciones digitales completas.</p>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+            <!-- Skill cards -->
+            <div class="skill-card reveal delay-1">
+                <i class="fa-brands fa-html5 skill-icon"></i>
+                <h4>HTML5</h4>
+                <p data-i18n="skill_html_desc">Maquetación semántica, accesibilidad y estructuras web modernas.</p>
+                <div class="skill-level">
+                    <div class="level-bar"><div class="level-fill" style="width: 92%"></div></div>
+                    <span class="level-text">92%</span>
+                </div>
+            </div>
+
+            <div class="skill-card reveal delay-2">
+                <i class="fa-brands fa-css3-alt skill-icon"></i>
+                <h4>CSS3 / SASS</h4>
+                <p data-i18n="skill_css_desc">Diseño responsivo, animaciones, Flexbox, Grid y preprocesadores.</p>
+                <div class="skill-level">
+                    <div class="level-bar"><div class="level-fill" style="width: 88%"></div></div>
+                    <span class="level-text">88%</span>
+                </div>
+            </div>
+
+            <div class="skill-card reveal delay-3">
+                <i class="fa-brands fa-square-js skill-icon"></i>
+                <h4>JavaScript</h4>
+                <p data-i18n="skill_js_desc">Manipulación del DOM, eventos e interactividad en el navegador.</p>
+                <div class="skill-level">
+                    <div class="level-bar"><div class="level-fill" style="width: 65%"></div></div>
+                    <span class="level-text">65%</span>
+                </div>
+            </div>
+
+            <div class="skill-card reveal delay-4">
+                <i class="fa-brands fa-java skill-icon"></i>
+                <h4>Java</h4>
+                <p data-i18n="skill_java_desc">Programación orientada a objetos y lógica de backend.</p>
+                <div class="skill-level">
+                    <div class="level-bar"><div class="level-fill" style="width: 60%"></div></div>
+                    <span class="level-text">60%</span>
+                </div>
+            </div>
+
+            <div class="skill-card reveal delay-5">
+                <i class="fa-brands fa-php skill-icon"></i>
+                <h4>PHP</h4>
+                <p data-i18n="skill_php_desc">Backend, POO, integración con bases de datos MySQL.</p>
+                <div class="skill-level">
+                    <div class="level-bar"><div class="level-fill" style="width: 78%"></div></div>
+                    <span class="level-text">78%</span>
+                </div>
+            </div>
+
+            <div class="skill-card reveal delay-6">
+                <i class="fa-solid fa-database skill-icon"></i>
+                <h4>MySQL / SQL</h4>
+                <p data-i18n="skill_sql_desc">Modelado de datos, consultas complejas, relaciones y optimización.</p>
+                <div class="skill-level">
+                    <div class="level-bar"><div class="level-fill" style="width: 82%"></div></div>
+                    <span class="level-text">82%</span>
+                </div>
+            </div>
+
+            <div class="skill-card reveal delay-2">
+                <i class="fa-brands fa-git-alt skill-icon"></i>
+                <h4>Git / GitHub</h4>
+                <p data-i18n="skill_git_desc">Control de versiones, ramas, pull requests y flujo de trabajo.</p>
+                <div class="skill-level">
+                    <div class="level-bar"><div class="level-fill" style="width: 85%"></div></div>
+                    <span class="level-text">85%</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="tools-section reveal">
+            <h3 data-i18n="tools_titulo">Otras herramientas y tecnologías</h3>
+            <div class="tools-tags">
+                <span class="tool-tag">Bootstrap</span>
+                <span class="tool-tag">Figma</span>
+                <span class="tool-tag">Adobe XD</span>
+                <span class="tool-tag">Microsoft Office</span>
+                <span class="tool-tag">WordPress</span>
+                <span class="tool-tag">ERP</span>
+                <span class="tool-tag">Linux</span>
+            </div>
+        </div>
+
+        <div class="lang-section reveal">
+            <h3 data-i18n="idiomas_titulo">Idiomas</h3>
+            <div class="lang-grid">
+                <div class="lang-item">
+                    <span class="lang-item-name">Español</span>
+                    <div class="level-bar"><div class="level-fill" style="width: 95%"></div></div>
+                    <span class="lang-item-level" data-i18n="nivel_avanzado">Avanzado</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-item-name">English</span>
+                    <div class="level-bar"><div class="level-fill" style="width: 40%"></div></div>
+                    <span class="lang-item-level" data-i18n="nivel_basico_en">Básico</span>
+                </div>
+                <div class="lang-item">
+                    <span class="lang-item-name">Français</span>
+                    <div class="level-bar"><div class="level-fill" style="width: 40%"></div></div>
+                    <span class="lang-item-level" data-i18n="nivel_basico_fr">Básico</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCIA ===== -->
+    <section class="experiencia-section" id="experiencia">
+        <div class="section-header reveal">
+            <span class="section-tag" data-i18n="tag_trayectoria">Trayectoria</span>
+            <h2 data-i18n="experiencia_titulo">Experiencia</h2>
+            <p data-i18n="experiencia_desc">Mi recorrido profesional y académico en el mundo del desarrollo.</p>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content reveal">
+                    <span class="tl-period">2025 – Actualidad</span>
+                    <h3 data-i18n="tl1_title">Grado uno en Informática de Gestión</h3>
+                    <div class="tl-company"><i class="fa-solid fa-building"></i> <span data-i18n="tl1_company">Universidad Nacional de Guinea Ecuatorial</span></div>
+                    <p data-i18n="tl1_desc">Carrera universitaria en la Universidad Nacional de Guinea Ecuatorial, para seguir aprendiendo nuevas áreas de la tecnología.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content reveal">
+                    <span class="tl-period">2025</span>
+                    <h3 data-i18n="tl4_title">Formación Complementaria en Desarrollo Web</h3>
+                    <div class="tl-company"><i class="fa-solid fa-certificate"></i> <span data-i18n="tl4_company">Ministerio de Transportes, Telecomunicaciones y Sistemas de Inteligencia Artificial, PNUD y otras organizaciones</span></div>
+                    <p data-i18n="tl4_desc">Fortalecimiento de competencias técnicas en el área de Desarrollo de Aplicaciones Web; adquisición de metodologías actuales y estándares internacionales en el desarrollo tecnológico.</p>
+                    <div class="tl-tags">
+                        <span class="tl-tag">Git</span>
+                        <span class="tl-tag">GitHub</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content reveal">
+                    <span class="tl-period">22 noviembre 2025</span>
+                    <h3 data-i18n="tl2_title">Técnico Superior en Desarrollo de Aplicaciones Web</h3>
+                    <div class="tl-company"><i class="fa-solid fa-graduation-cap"></i> <span data-i18n="tl2_company">INSTTIC – Instituto Superior de Telecomunicaciones y Tecnologías de Información y Comunicación de OYALA</span></div>
+                    <p data-i18n="tl2_desc">Formación especializada en desarrollo de aplicaciones web: proyectos prácticos de frontend y backend, bases de datos relacionales y despliegue de aplicaciones.</p>
+                    <div class="tl-tags">
+                        <span class="tl-tag">HTML</span>
+                        <span class="tl-tag">CSS</span>
+                        <span class="tl-tag">PHP</span>
+                        <span class="tl-tag">JavaScript</span>
+                        <span class="tl-tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content reveal">
+                    <span class="tl-period">Mayo – Julio 2025</span>
+                    <h3 data-i18n="tl3_title">Desarrollador / Investigador</h3>
+                    <div class="tl-company"><i class="fa-solid fa-flask"></i> <span data-i18n="tl3_company">Trabajo de fin de carrera</span></div>
+                    <p data-i18n="tl3_desc">Diseño y desarrollo de un prototipo funcional de un sistema centralizado capaz de interconectar múltiples clínicas registradas, optimizando el flujo de datos y el acceso a la información compartida.</p>
+                    <div class="tl-tags">
+                        <span class="tl-tag">HTML</span>
+                        <span class="tl-tag">CSS</span>
+                        <span class="tl-tag">PHP</span>
+                        <span class="tl-tag">SQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content reveal">
+                    <span class="tl-period">Julio 2022</span>
+                    <h3 data-i18n="tl5_title">Bachillerato</h3>
+                    <div class="tl-company"><i class="fa-solid fa-school"></i> <span data-i18n="tl5_company">Colegio Adventista de Bata</span></div>
+                    <p data-i18n="tl5_desc">Formación secundaria previa al inicio de mis estudios técnicos en desarrollo de aplicaciones web.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROYECTOS ===== -->
+    <section class="proyectos-section" id="proyectos">
+        <div class="section-header reveal">
+            <span class="section-tag" data-i18n="tag_portfolio">Portfolio</span>
+            <h2 data-i18n="proyectos_titulo">Mis Proyectos</h2>
+            <p data-i18n="proyectos_desc">Algunos de los proyectos que he desarrollado recientemente.</p>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="proyectos-grid">
+            <div class="proyecto-card reveal delay-1">
+                <div class="proyecto-thumb proyecto-thumb-1">
+                    <i class="fa-solid fa-hospital proyecto-thumb-icon"></i>
+                    <span class="proyecto-thumb-label" data-i18n="proj1_label">Trabajo de Fin de Carrera</span>
+                </div>
+                <div class="proyecto-body">
+                    <h3 data-i18n="proj1_title">Sistema Centralizado de Interconexión de Clínicas</h3>
+                    <p data-i18n="proj1_desc">Prototipo funcional de un sistema centralizado capaz de interconectar múltiples clínicas registradas, optimizando el flujo de datos y el acceso a la información compartida.</p>
+                    <div class="proyecto-stack">
+                        <span class="stack-tag">HTML</span>
+                        <span class="stack-tag">CSS</span>
+                        <span class="stack-tag">PHP</span>
+                        <span class="stack-tag">SQL</span>
+                    </div>
+                    <div class="proyecto-links">
+                        <a href="#" class="proyecto-link code"><i class="fa-brands fa-github"></i> <span data-i18n="link_codigo">Código</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto-card reveal delay-2">
+                <div class="proyecto-thumb proyecto-thumb-2">
+                    <i class="fa-solid fa-chart-line proyecto-thumb-icon"></i>
+                    <span class="proyecto-thumb-label">Dashboard</span>
+                </div>
+                <div class="proyecto-body">
+                    <h3 data-i18n="proj2_title">Panel de Gestión Empresarial</h3>
+                    <p data-i18n="proj2_desc">Dashboard administrativo con estadísticas en tiempo real, gestión de usuarios, reportes descargables y control de permisos.</p>
+                    <div class="proyecto-stack">
+                        <span class="stack-tag">PHP</span>
+                        <span class="stack-tag">JavaScript</span>
+                        <span class="stack-tag">MySQL</span>
+                        <span class="stack-tag">Chart.js</span>
+                    </div>
+                    <div class="proyecto-links">
+                        <a href="#" class="proyecto-link demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        <a href="#" class="proyecto-link code"><i class="fa-brands fa-github"></i> <span data-i18n="link_codigo">Código</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto-card reveal delay-3">
+                <div class="proyecto-thumb proyecto-thumb-3">
+                    <i class="fa-solid fa-comments proyecto-thumb-icon"></i>
+                    <span class="proyecto-thumb-label">Red Social</span>
+                </div>
+                <div class="proyecto-body">
+                    <h3 data-i18n="proj3_title">Red Social Minimalista</h3>
+                    <p data-i18n="proj3_desc">Plataforma social con publicaciones, sistema de seguidores, likes, comentarios y mensajería privada en tiempo real.</p>
+                    <div class="proyecto-stack">
+                        <span class="stack-tag">React</span>
+                        <span class="stack-tag">Socket.io</span>
+                        <span class="stack-tag">Node.js</span>
+                        <span class="stack-tag">MongoDB</span>
+                    </div>
+                    <div class="proyecto-links">
+                        <a href="#" class="proyecto-link demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        <a href="#" class="proyecto-link code"><i class="fa-brands fa-github"></i> <span data-i18n="link_codigo">Código</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto-card reveal delay-4">
+                <div class="proyecto-thumb proyecto-thumb-4">
+                    <i class="fa-solid fa-calendar-check proyecto-thumb-icon"></i>
+                    <span class="proyecto-thumb-label">SaaS</span>
+                </div>
+                <div class="proyecto-body">
+                    <h3 data-i18n="proj4_title">App de Gestión de Citas</h3>
+                    <p data-i18n="proj4_desc">Sistema de reservas online para negocios, con calendario interactivo, notificaciones por email y gestión multi-empleado.</p>
+                    <div class="proyecto-stack">
+                        <span class="stack-tag">PHP</span>
+                        <span class="stack-tag">JavaScript</span>
+                        <span class="stack-tag">MySQL</span>
+                        <span class="stack-tag">Bootstrap</span>
+                    </div>
+                    <div class="proyecto-links">
+                        <a href="#" class="proyecto-link demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        <a href="#" class="proyecto-link code"><i class="fa-brands fa-github"></i> <span data-i18n="link_codigo">Código</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto-card reveal delay-5">
+                <div class="proyecto-thumb proyecto-thumb-5">
+                    <i class="fa-solid fa-utensils proyecto-thumb-icon"></i>
+                    <span class="proyecto-thumb-label">Web App</span>
+                </div>
+                <div class="proyecto-body">
+                    <h3 data-i18n="proj5_title">Plataforma de Restaurantes</h3>
+                    <p data-i18n="proj5_desc">Directorio web con filtros avanzados, valoraciones de usuarios, sistema de reservas y panel de gestión para propietarios.</p>
+                    <div class="proyecto-stack">
+                        <span class="stack-tag">HTML/CSS</span>
+                        <span class="stack-tag">PHP</span>
+                        <span class="stack-tag">MySQL</span>
+                    </div>
+                    <div class="proyecto-links">
+                        <a href="#" class="proyecto-link demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        <a href="#" class="proyecto-link code"><i class="fa-brands fa-github"></i> <span data-i18n="link_codigo">Código</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto-card reveal delay-6">
+                <div class="proyecto-thumb proyecto-thumb-6">
+                    <i class="fa-solid fa-graduation-cap proyecto-thumb-icon"></i>
+                    <span class="proyecto-thumb-label">E-learning</span>
+                </div>
+                <div class="proyecto-body">
+                    <h3 data-i18n="proj6_title">Plataforma Educativa</h3>
+                    <p data-i18n="proj6_desc">LMS con cursos en video, tests interactivos, seguimiento de progreso y sistema de certificados descargables.</p>
+                    <div class="proyecto-stack">
+                        <span class="stack-tag">React</span>
+                        <span class="stack-tag">Node.js</span>
+                        <span class="stack-tag">MySQL</span>
+                    </div>
+                    <div class="proyecto-links">
+                        <a href="#" class="proyecto-link demo"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                        <a href="#" class="proyecto-link code"><i class="fa-brands fa-github"></i> <span data-i18n="link_codigo">Código</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="contacto-section" id="contacto">
+        <div class="section-header reveal">
+            <span class="section-tag" data-i18n="tag_contacto">Contacto</span>
+            <h2 data-i18n="contacto_titulo">Trabajemos Juntos</h2>
+            <p data-i18n="contacto_desc">¿Tienes un proyecto en mente? Estaré encantado de escucharte.</p>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="contacto-grid">
+            <div class="contacto-info reveal-left">
+                <h3 data-i18n="contacto_hablemos">¡Hablemos!</h3>
+                <p data-i18n="contacto_p">Estoy disponible para proyectos freelance, oportunidades laborales o simplemente para charlar sobre tecnología. No dudes en contactarme.</p>
+
+                <div class="contacto-items">
+                    <a href="mailto:santandermorgadestarsicio@gmail.com" class="contacto-item">
+                        <div class="contacto-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="contacto-item-text">
+                            <span data-i18n="label_email">Email</span>
+                            <p>santandermorgadestarsicio@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/240555541067" class="contacto-item" target="_blank">
+                        <div class="contacto-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                        <div class="contacto-item-text">
+                            <span data-i18n="label_whatsapp">WhatsApp</span>
+                            <p>+240 555 541 067</p>
+                        </div>
+                    </a>
+                    <a href="#" class="contacto-item">
+                        <div class="contacto-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="contacto-item-text">
+                            <span data-i18n="label_ubicacion">Ubicación</span>
+                            <p data-i18n="valor_ubicacion">Malabo, Guinea Ecuatorial</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <p>© 2024 <span>SAMO</span> · <span data-i18n="footer_hecho">Desarrollado con</span> <span>❤</span> <span data-i18n="footer_cafe">y mucho café ☕</span></p>
+    </footer>
+
+    <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+    <a href="https://wa.me/240555541067" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ===== SCROLL ANIMATIONS JS ===== -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
